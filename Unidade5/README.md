@@ -242,10 +242,10 @@ classDiagram
 
 | Papel | Responsável | O que faz |
 |---|---|---|
-| Product Owner | Thiago Braziellas | Representa o produtor, mantém e prioriza o backlog (MoSCoW) |
+| Product Owner | Pedro Ryan | Representa o produtor, mantém e prioriza o backlog (MoSCoW) |
 | Scrum Master | Luiz Claudio | Conduz as cerimônias, remove impedimentos e cuida do ritmo das sprints |
 | Analista de requisitos e UX | Arthur Santos | Entrevista os early adopters, escreve casos de uso e critérios de aceite, desenha as telas |
-| Desenvolvimento e testes | Pedro Ryan, com apoio de todo o time | Implementa as funcionalidades, testa no campo e valida os critérios de aceite |
+| Desenvolvimento e testes | Thiago Braziellas, com apoio de todo o time | Implementa as funcionalidades, testa no campo e valida os critérios de aceite |
 
 **Como o time trabalha:** sprints de 2 semanas; planejamento, daily de 15 min, revisão com um produtor parceiro e retrospectiva. Cada história só é "pronta" quando passa nos critérios de aceite e é testada no celular, sem internet.
 
