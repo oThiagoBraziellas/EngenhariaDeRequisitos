@@ -14,6 +14,10 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 ├── ISO_IEC_25010/
 │   └── Atividade.md                        # Exercícios de qualidade de software e conflitos de qualidade
 ├── Unidade5/
+│   ├── README.md                           # Pitch do produto Rota do Campo (Lean Canvas, requisitos, casos de uso, classes, equipe, MVP)
+│   ├── PitchDeck.html                      # Slides do pitch (abrir no navegador)
+│   ├── PitchDeck.pdf                       # Slides do pitch em PDF
+│   ├── DiagramaCasosDeUso_RotaDoCampo.svg  # Diagrama de casos de uso do produto
 │   └── ElicitacaoRequisitos/
 │       └── Atividade.md                    # Stakeholders, early adopters, RNFs e MoSCoW do sistema agrícola
 ├── Unidade5_Modelagem_de_Sistemas/
@@ -37,6 +41,7 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 | Análise de negócio | [BABOK: gestão interna](Analise_Negocio/Atividade_BABOK.md) | Problema, solução, requisitos de negócio, stack, arquitetura e stakeholders |
 | Qualidade | [ISO/IEC 25010](ISO_IEC_25010/Atividade.md) | Avaliação de um sistema acadêmico e análise de conflitos de qualidade |
 | Unidade 5 | [Elicitação: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/Atividade.md) | Stakeholders, early adopter, problemas, canais, RNFs, MoSCoW e métricas |
+| Unidade 5 | [Pitch do produto: Rota do Campo](Unidade5/README.md) | Lean Canvas, RFs e RNFs, caso de uso especificado, diagrama de classes, equipe ágil, MVP e slides em [PDF](Unidade5/PitchDeck.pdf) e [HTML](Unidade5/PitchDeck.html) |
 | Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5_Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
 
 ## Referências usadas
