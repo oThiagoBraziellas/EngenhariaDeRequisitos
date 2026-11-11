@@ -3,24 +3,24 @@
 ![Licença](https://img.shields.io/badge/licen%C3%A7a-CC0--1.0-lightgrey)
 ![Semestre](https://img.shields.io/badge/CEUB-2026%2F2-blue)
 
-Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitário de Brasília (CEUB), feitas em grupo no 2º semestre de 2026. Cada pasta reúne um tema da disciplina: elicitação, análise de negócio com BABOK, qualidade com a ISO/IEC 25010, priorização MoSCoW e modelagem com casos de uso, sempre aplicados a um sistema concreto.
+Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitário de Brasília (CEUB), feitas em grupo no 2º semestre de 2026. A estrutura segue o repositório modelo da professora: cada pasta reúne um tema da disciplina: elicitação, análise de negócio com BABOK, qualidade com a ISO/IEC 25010, priorização MoSCoW e modelagem com casos de uso, sempre aplicados a um sistema concreto.
 
 ## Estrutura
 
 ```text
 .
 ├── Analise_Negocio/
-│   └── BABOK_GestaoInterna.md              # Requisitos de negócio, stakeholders e arquitetura (BABOK v3)
+│   └── Atividade_BABOK.md                  # Requisitos de negócio, stakeholders e arquitetura (BABOK v3)
 ├── ISO_IEC_25010/
-│   └── Gabarito_ISO_IEC_25010.md           # Exercícios de qualidade de software e conflitos de qualidade
+│   └── Atividade.md                        # Exercícios de qualidade de software e conflitos de qualidade
 ├── Unidade5/
-│   ├── ElicitacaoRequisitos/
-│   │   └── MonitoramentoAgricola.md        # Stakeholders, early adopters, RNFs e MoSCoW do sistema agrícola
-│   └── ModelagemDeSistemas/
-│       ├── DoRequisitoAoDiagramaDeCasosDeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
-│       └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso: análise de fazendas com IA
+│   └── ElicitacaoRequisitos/
+│       └── Atividade.md                    # Stakeholders, early adopters, RNFs e MoSCoW do sistema agrícola
+├── Unidade5_Modelagem_de_Sistemas/
+│   ├── DorequisitoaoDiagramadeCasosdeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
+│   └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso: análise de fazendas com IA
 ├── VisaoGeral/
-│   ├── SistemaEscolar.md                   # Primeira atividade: usuários, RFs e RNFs
+│   ├── Atividade.md                        # Primeira atividade: usuários, RFs e RNFs
 │   ├── ClinicaMedica_MVP.md                # Escopo do MVP da clínica médica
 │   └── ClinicaMedica_Formulario.md         # Especificação completa da clínica médica
 ├── LICENSE
@@ -31,13 +31,13 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 
 | Tema | Documento | O que tem |
 |---|---|---|
-| Visão geral | [Sistema escolar](VisaoGeral/SistemaEscolar.md) | Quem usa o sistema, requisitos funcionais e não funcionais |
+| Visão geral | [Sistema escolar](VisaoGeral/Atividade.md) | Quem usa o sistema, requisitos funcionais e não funcionais |
 | Visão geral | [Clínica médica: MVP](VisaoGeral/ClinicaMedica_MVP.md) | Problemas, regras de negócio, RFs, RNFs, indicadores, MoSCoW e trade-offs |
 | Visão geral | [Clínica médica: especificação](VisaoGeral/ClinicaMedica_Formulario.md) | Matriz de rastreabilidade, critérios de aceitação, fluxos, LGPD e perfis de acesso |
-| Análise de negócio | [BABOK: gestão interna](Analise_Negocio/BABOK_GestaoInterna.md) | Problema, solução, requisitos de negócio, stack, arquitetura e stakeholders |
-| Qualidade | [ISO/IEC 25010](ISO_IEC_25010/Gabarito_ISO_IEC_25010.md) | Avaliação de um sistema acadêmico e análise de conflitos de qualidade |
-| Unidade 5 | [Elicitação: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/MonitoramentoAgricola.md) | Stakeholders, early adopter, problemas, canais, RNFs, MoSCoW e métricas |
-| Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5/ModelagemDeSistemas/DoRequisitoAoDiagramaDeCasosDeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
+| Análise de negócio | [BABOK: gestão interna](Analise_Negocio/Atividade_BABOK.md) | Problema, solução, requisitos de negócio, stack, arquitetura e stakeholders |
+| Qualidade | [ISO/IEC 25010](ISO_IEC_25010/Atividade.md) | Avaliação de um sistema acadêmico e análise de conflitos de qualidade |
+| Unidade 5 | [Elicitação: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/Atividade.md) | Stakeholders, early adopter, problemas, canais, RNFs, MoSCoW e métricas |
+| Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5_Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
 
 ## Referências usadas
 
