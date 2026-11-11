@@ -1,6 +1,6 @@
 # Unidade 5 - Pitch do Produto: Rota do Campo
 
-Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado em [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e modelado no [diagrama de casos de uso](../Unidade5_Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg).
+Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado em [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e modelado no [diagrama de casos de uso](Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg).
 
 Slides da apresentação: [PitchDeck.pdf](PitchDeck.pdf) para ver direto no GitHub, ou [PitchDeck.html](PitchDeck.html) para apresentar (baixar, abrir no navegador e usar as setas do teclado).
 
@@ -94,7 +94,7 @@ Um aplicativo de celular que:
 
 ![Diagrama de casos de uso do Rota do Campo](DiagramaCasosDeUso_RotaDoCampo.svg)
 
-O diagrama atualiza o da [atividade de modelagem](../Unidade5_Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
+O diagrama atualiza o da [atividade de modelagem](Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
 
 | Campo | Descrição |
 |---|---|

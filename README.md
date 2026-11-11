@@ -18,11 +18,11 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 │   ├── PitchDeck.html                      # Slides do pitch (abrir no navegador)
 │   ├── PitchDeck.pdf                       # Slides do pitch em PDF
 │   ├── DiagramaCasosDeUso_RotaDoCampo.svg  # Diagrama de casos de uso do produto
-│   └── ElicitacaoRequisitos/
-│       └── Atividade.md                    # Stakeholders, early adopters, RNFs e MoSCoW do sistema agrícola
-├── Unidade5_Modelagem_de_Sistemas/
-│   ├── DorequisitoaoDiagramadeCasosdeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
-│   └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso: análise de fazendas com IA
+│   ├── ElicitacaoRequisitos/
+│   │   └── Atividade.md                    # Stakeholders, early adopters, RNFs, MoSCoW e KPIs do sistema agrícola
+│   └── Modelagem_de_Sistemas/
+│       ├── DorequisitoaoDiagramadeCasosdeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
+│       └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso: análise de fazendas com IA
 ├── VisaoGeral/
 │   ├── Atividade.md                        # Primeira atividade: usuários, RFs e RNFs
 │   ├── ClinicaMedica_MVP.md                # Escopo do MVP da clínica médica
@@ -42,7 +42,7 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 | Qualidade | [ISO/IEC 25010](ISO_IEC_25010/Atividade.md) | Avaliação de um sistema acadêmico e análise de conflitos de qualidade |
 | Unidade 5 | [Elicitação: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/Atividade.md) | Stakeholders, early adopter, problemas, canais, RNFs, MoSCoW e métricas |
 | Unidade 5 | [Pitch do produto: Rota do Campo](Unidade5/README.md) | Lean Canvas, RFs e RNFs, caso de uso especificado, diagrama de classes, equipe ágil, MVP e slides em [PDF](Unidade5/PitchDeck.pdf) e [HTML](Unidade5/PitchDeck.html) |
-| Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5_Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
+| Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5/Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
 
 ## Referências usadas
 
