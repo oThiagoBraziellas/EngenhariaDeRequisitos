@@ -136,7 +136,7 @@ Apenas os itens que passaram nesse teste foram classificados como **Must Have**.
 
 Requisitos como lembretes automáticos, prontuário eletrônico e fila de espera foram rebaixados para **Should Have** — a clínica consegue operar manualmente na V1 sem eles.
 
-## 8. Equilíbrio Financeiro e Métricas 
+## 8. Equilíbrio Financeiro e Métricas
 
 ### 8.1 O Equilíbrio Financeiro
 
@@ -158,11 +158,11 @@ Medição contínua da tração do produto com **foco implacável em Conversão 
 
 * **Métricas de Vaidade:** Indicadores secundários que apenas inflam o ego, mas não movem o ponteiro de resultado real do produto.
 
-## 6. Vantagem Injusta - O Escudo
+## 9. Vantagem Injusta - O Escudo
 
 A Vantagem Injusta representa os diferenciais estratégicos que **não podem ser facilmente copiados ou comprados** pela concorrência, protegendo o negócio e garantindo sustentabilidade a longo prazo.
 
-### 9.Os Quatro Pilares do Escudo
+### 9.1 Os Quatro Pilares do Escudo
 
 1. **Dados Exclusivos:**
    * *Base de Dados Histórica no Campo:* Acúmulo proprietário de dados georreferenciados sobre ocorrência de pragas, doenças e estresse hídrico em microclimas regionais.
