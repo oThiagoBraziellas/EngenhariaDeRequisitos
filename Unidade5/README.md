@@ -1,16 +1,19 @@
-# Unidade 5 - Pitch do Produto: Rota do Campo
+# Unidade 5 - Pitch do Produto: AGROAI
 
-Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado em [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e modelado no [diagrama de casos de uso](../Unidade5_Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg).
+Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado em [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e modelado no [diagrama de casos de uso](Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg).
 
-Slides da apresentação: [PitchDeck.pdf](PitchDeck.pdf) para ver direto no GitHub, ou [PitchDeck.html](PitchDeck.html) para apresentar (baixar, abrir no navegador e usar as setas do teclado).
+Slides da apresentação:
+
+- [AGROAI_ApresentacaoCanva.pdf](AGROAI_ApresentacaoCanva.pdf): apresentação visual do produto (problema, cliente, solução, método de campo, proposta de valor, rede de valor, go-to-market e vantagem competitiva).
+- [PitchDeck.pdf](PitchDeck.pdf): pitch completo com todos os itens do roteiro (Lean Canvas, requisitos, caso de uso, diagramas, equipe ágil e MVP). Também em [PitchDeck.html](PitchDeck.html) para apresentar no navegador com as setas do teclado.
 
 ---
 
 ## 1. Slide de abertura
 
-- **Nome do produto:** Rota do Campo
+- **Nome do produto:** AGROAI
 - **Proposta de valor:**
-  > "Rota do Campo ajuda pequenos e médios produtores rurais a encontrar problemas na lavoura antes que virem prejuízo, por meio de imagens de satélite e IA que mostram onde ir hoje."
+  > "O AGROAI ajuda pequenos e médios produtores rurais a encontrar problemas na lavoura antes que virem prejuízo, por meio de imagens de satélite e IA que mostram onde ir hoje."
 - **Integrantes:** Thiago Braziellas, Arthur Santos, Luiz Claudio e Pedro Ryan
 
 ## 2. Problema e oportunidade
@@ -47,7 +50,7 @@ Um aplicativo de celular que:
 
 ## 4. Lean Canvas
 
-| Bloco | Rota do Campo |
+| Bloco | AGROAI |
 |---|---|
 | **Problema** | Monitoramento incompleto; detecção tardia de pragas, doenças e estresse hídrico; alto custo de inspeção presencial |
 | **Segmentos de clientes** | Pequenos e médios produtores de grãos. Early adopter: produtor de médio porte ou jovem gestor (segunda geração) que já usa o celular na rotina e teve perda recente |
@@ -92,9 +95,9 @@ Um aplicativo de celular que:
 
 ## 6. Especificação de caso de uso
 
-![Diagrama de casos de uso do Rota do Campo](DiagramaCasosDeUso_RotaDoCampo.svg)
+![Diagrama de casos de uso do AGROAI](DiagramaCasosDeUso_AGROAI.svg)
 
-O diagrama atualiza o da [atividade de modelagem](../Unidade5_Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
+O diagrama atualiza o da [atividade de modelagem](Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
 
 | Campo | Descrição |
 |---|---|
