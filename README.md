@@ -61,7 +61,7 @@ flowchart LR
 | **MVP** | Fazenda e talhões no mapa, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia e inspeção offline. |
 | **Validação** | 5 produtores usando durante 30 dias numa safra. |
 
-O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md).
+O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md) e a identidade visual no [Brand Book do AGROAI](Unidade5/BrandBook/BrandBook_AGROAI.pdf).
 
 ## 🗂️ Estrutura
 
@@ -77,6 +77,8 @@ O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md).
 │   └── Atividade.md                        # 4. Qualidade de software
 ├── Unidade5/
 │   ├── README.md                           # 7. Pitch do produto AGROAI
+│   ├── BrandBook/
+│   │   └── BrandBook_AGROAI.pdf / .html    # Identidade visual do AGROAI
 │   ├── ElicitacaoRequisitos/
 │   │   └── Atividade.md                    # 6. Elicitação do sistema agrícola
 │   └── Modelagem_de_Sistemas/

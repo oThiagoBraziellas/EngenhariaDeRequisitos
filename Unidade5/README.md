@@ -9,6 +9,7 @@ Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto
 ## 1. Slide de abertura
 
 - **Nome do produto:** AGROAI
+- **Identidade visual:** logo, cores, tipografia e aplicações no [Brand Book do AGROAI](BrandBook/BrandBook_AGROAI.pdf) (também em [HTML](BrandBook/BrandBook_AGROAI.html))
 - **Proposta de valor:**
   > "O AGROAI ajuda pequenos e médios produtores rurais a encontrar problemas na lavoura antes que virem prejuízo, por meio de imagens de satélite e IA que mostram onde ir hoje."
 - **Integrantes:** Thiago Braziellas, Arthur Santos, Luiz Claudio e Pedro Ryan
