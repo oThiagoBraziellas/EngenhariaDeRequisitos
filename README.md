@@ -83,7 +83,8 @@ O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md).
 │       ├── DorequisitoaoDiagramadeCasosdeUso.md   # 5. Do requisito ao diagrama de casos de uso
 │       └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso feito em aula
 ├── assets/
-│   └── banner.svg
+│   ├── banner.svg
+│   └── logo/                               # Logo do AGROAI: horizontal, invertido, monocromático e ícone de app
 ├── LICENSE
 └── README.md
 ```
