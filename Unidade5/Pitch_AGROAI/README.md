@@ -10,6 +10,7 @@ Arquivos desta pasta:
 | [AGROAI_Pitch.html](AGROAI_Pitch.html) | Os mesmos slides para apresentar no navegador (setas do teclado ou clique) |
 | [AGROAI_ApresentacaoCanva.pdf](AGROAI_ApresentacaoCanva.pdf) | Apresentação visual feita no Canva |
 | [DiagramaCasosDeUso_AGROAI.svg](DiagramaCasosDeUso_AGROAI.svg) | Diagrama de casos de uso do produto |
+| [RoteiroApresentacao.md](RoteiroApresentacao.md) | Quem apresenta cada slide, o que falar e respostas para a banca |
 
 ---
 

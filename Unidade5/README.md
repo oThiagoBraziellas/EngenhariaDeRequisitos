@@ -21,5 +21,6 @@ Unidade5/
     ├── AGROAI_Pitch.pdf
     ├── AGROAI_Pitch.html
     ├── AGROAI_ApresentacaoCanva.pdf
-    └── DiagramaCasosDeUso_AGROAI.svg
+    ├── DiagramaCasosDeUso_AGROAI.svg
+    └── RoteiroApresentacao.md
 ```

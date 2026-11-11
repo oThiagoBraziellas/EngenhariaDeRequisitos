@@ -24,7 +24,8 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 │       ├── README.md                       # Pitch do produto (Lean Canvas, requisitos, caso de uso, classes, equipe, MVP)
 │       ├── AGROAI_Pitch.pdf / .html        # Slides do pitch
 │       ├── AGROAI_ApresentacaoCanva.pdf    # Apresentação visual feita no Canva
-│       └── DiagramaCasosDeUso_AGROAI.svg   # Diagrama de casos de uso do produto
+│       ├── DiagramaCasosDeUso_AGROAI.svg   # Diagrama de casos de uso do produto
+│       └── RoteiroApresentacao.md          # Divisão dos slides e roteiro de fala
 ├── VisaoGeral/
 │   ├── Atividade.md                        # Primeira atividade: usuários, RFs e RNFs
 │   ├── ClinicaMedica_MVP.md                # Escopo do MVP da clínica médica
