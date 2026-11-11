@@ -102,39 +102,41 @@ Para viabilizar a entrada no mercado e escalar a solução, definem-se os canais
 
 ## 6. Requisitos Não Funcionais (ISO/IEC 25010:2023)
 
-A qualidade do sistema foi ancorada no modelo de qualidade de produto da **ISO/IEC 25010:2023**, com critérios **mensuráveis e testáveis** — evitando requisitos vagos como "o sistema deve ser rápido" ou "o sistema deve ser seguro".
+A qualidade do sistema foi ancorada no modelo de qualidade de produto da **ISO/IEC 25010:2023**, com critérios **mensuráveis e testáveis**, pensados para o uso real no campo: celular, sinal fraco e usuário sem treinamento técnico.
 
-| **Código** | **Requisito** | **Característica ISO 25010** | **Critério de Aceitação** | **Verificação** | 
-| **RNF01** | Busca de horários responde em até 2 segundos | Eficiência de desempenho | ≤ 2s em 95% das requisições, sob carga de até 500 usuários simultâneos | Teste de carga (k6 / JMeter) | 
-| **RNF02** | Comunicação criptografada via HTTPS/TLS 1.2+ | Segurança | 100% das rotas com TLS ativo | Varredura OWASP ZAP | 
-| **RNF03** | Disponibilidade mínima de 99,5% ao mês | Confiabilidade | Uptime ≥ 99,5% | Monitoramento contínuo | 
-| **RNF04** | Backup diário automatizado do banco de dados | Confiabilidade | Backup sem falha; restauração testada mensalmente | Simulação de recuperação | 
-| **RNF05** | Controle de acesso a dados sensíveis (LGPD) | Segurança | Tentativa não autorizada bloqueada e registrada | Teste de controle de acesso | 
+| **Código** | **Requisito** | **Característica ISO 25010** | **Critério de Aceitação** | **Verificação** |
+| ----- | ----- | ----- | ----- | ----- |
+| **RNF01** | Registro de inspeção sem internet | Confiabilidade | Inspeção salva offline e sincronizada em até 1 min depois que o sinal volta | Teste em modo avião no campo |
+| **RNF02** | Rota do dia rápida no celular | Eficiência de desempenho | Carrega em até 3 s em 95% das aberturas numa conexão 4G | Teste de carga e medição no aparelho |
+| **RNF03** | Uso sem treinamento | Capacidade de interação | 4 de 5 produtores de teste chegam à primeira rota em até 10 min sem ajuda | Teste de usabilidade com early adopters |
+| **RNF04** | Proteção dos dados da propriedade (LGPD) | Segurança | Só o produtor e os agrônomos autorizados veem a fazenda; tentativas negadas ficam registradas | Teste de controle de acesso |
+| **RNF05** | Comunicação criptografada | Segurança | 100% das chamadas por HTTPS com TLS 1.2 ou superior | Varredura OWASP ZAP |
 
 ### Backlog Não Funcional
 
-| **Código** | **Requisito** | **Característica ISO 25010** | 
-| **RNF-B01** | Facilidade de agendamento (≤ 3 ações) | Capacidade de Interação | 
-| **RNF-B02** | Suporte a 50 acessos simultâneos | Eficiência de desempenho | 
-| **RNF-B03** | Autenticação em duas etapas (2FA) | Segurança | 
-| **RNF-B04** | Compatibilidade multi-navegador | Compatibilidade | 
-| **RNF-B05** | Responsividade em múltiplas telas | Capacidade de Interação | 
+| **Código** | **Requisito** | **Característica ISO 25010** |
+| ----- | ----- | ----- |
+| **RNF-B01** | Alerta entregue em até 1 h após o processamento da imagem | Eficiência de desempenho |
+| **RNF-B02** | Disponibilidade mínima de 99,5% ao mês | Confiabilidade |
+| **RNF-B03** | Funcionamento em Android 9 ou superior e iOS 15 ou superior | Compatibilidade |
+| **RNF-B04** | Leitura confortável sob sol forte (alto contraste) | Capacidade de interação |
+| **RNF-B05** | Autenticação em duas etapas para agrônomos e consultores | Segurança |
 
 ## 7. Priorização MoSCoW
 
 Para evitar a **"síndrome do tudo é urgente"**, cada requisito passou por um filtro objetivo:
 
-> *"Se o sistema for lançado sem este item, a operação da clínica trava ou existe violação legal?"*
+> *"Sem este item, o produtor ainda consegue saber onde ir hoje e registrar o que encontrou?"*
 
 Apenas os itens que passaram nesse teste foram classificados como **Must Have**. Resultado consolidado:
 
-* **7 requisitos funcionais Must** (RF01 a RF07) — núcleo vital do fluxo de agendamento.
+* **7 requisitos funcionais Must** (RF01 a RF07): cadastro e login, fazenda e talhões no mapa, cultura e safra, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia e registro de inspeção.
 
-* **5 requisitos não funcionais Must** (RNF01 a RNF05) — exigências de LGPD, segurança, disponibilidade e integridade dos dados.
+* **5 requisitos não funcionais Must** (RNF01 a RNF05): funcionamento offline, desempenho no 4G, uso sem treinamento, LGPD e criptografia.
 
 * **Total do MVP: 12 itens inegociáveis.**
 
-Requisitos como lembretes automáticos, prontuário eletrônico e fila de espera foram rebaixados para **Should Have** — a clínica consegue operar manualmente na V1 sem eles.
+Alertas por WhatsApp, relatórios históricos e acesso do agrônomo ficaram como **Should Have**: o produtor consegue usar a rota do dia na V1 sem eles. Classificação de uso do solo e mapeamento de relevo ficaram como **Could Have**.
 
 ## 8. Equilíbrio Financeiro e Métricas
 
@@ -180,37 +182,40 @@ A Vantagem Injusta representa os diferenciais estratégicos que **não podem ser
    * *Algoritmo Proprietário de Roteamento:* Sistema patenteado de priorização que converte imagens de satélite/drones em itinerários diários de inspeção ("onde ir hoje").
    * *Modelos IA Proprietários:* Registros e segredos comerciais de modelos treinados em imagens agrícolas específicas para culturas locais.
 
-10. Análise de Trade-offs
-10.1 Segurança vs. Capacidade de Interação
+## 10. Análise de Trade-offs
 
-2FA obrigatório para médicos e gerentes, considerando o acesso a dados clínicos e os requisitos da LGPD. Para o autoatendimento do paciente, pode-se utilizar autenticação simplificada por SMS ou e-mail, considerando o menor nível de risco de exposição.
+### 10.1 Segurança vs. Capacidade de Interação
 
-10.2 Eficiência de Desempenho vs. Confiabilidade
+Login simples e sessão longa no celular do produtor, porque ele usa o app no campo, muitas vezes de luva e com pressa. A autenticação em duas etapas fica para agrônomos e consultores, que acessam várias fazendas.
 
-Priorizar a consistência do banco de dados, realizando verificações e bloqueios antes da confirmação das operações, mesmo que isso acrescente alguns milissegundos de latência. Evitar conflitos relacionados à RN02 é mais importante do que obter o menor tempo de resposta possível.
+### 10.2 Eficiência de Desempenho vs. Precisão da IA
 
-10.3 Adequação Funcional vs. Fluidez
+O processamento pesado das imagens roda no servidor, antes de o usuário abrir o app. O celular só recebe a rota pronta, o que garante a abertura em até 3 s (RNF02) sem simplificar o modelo.
 
-Executar todas as validações necessárias, como escala, CPF e disponibilidade, no backend. Dessa forma, o sistema preserva uma experiência fluida para o usuário sem comprometer a integridade e a consistência dos dados.
+### 10.3 Atualização dos Dados vs. Funcionamento Offline
 
-10.4 Confiabilidade vs. Custo
+A rota do dia é baixada no aparelho quando há sinal. No campo, o usuário trabalha com a última versão salva, e as inspeções sobem quando a conexão volta (RNF01). Aceitamos que a rota possa estar algumas horas desatualizada.
 
-Aceitar os custos associados à alta disponibilidade e à utilização de backups redundantes. Por se tratar de um sistema voltado à área da saúde, períodos de indisponibilidade podem impactar diretamente o atendimento aos pacientes.
+### 10.4 Frequência das Imagens vs. Custo
 
-10.5 Compatibilidade vs. Privacidade
+O MVP usa imagens gratuitas do Sentinel-2, que chegam a cada poucos dias e podem vir cobertas por nuvens. Imagens comerciais diárias ou de drone ficam para depois, quando a receita justificar o custo.
 
-Quando a RF-B01 for priorizada, restringir o conteúdo enviado ao mínimo necessário para a operação, contendo apenas informações como nome, data e horário, sem incluir informações clínicas ou sensíveis desnecessárias.
+### 10.5 Alertas vs. Excesso de Notificações
 
-10.6 Flexibilidade vs. Manutenibilidade
+Só anomalias de severidade alta geram alerta imediato. As demais entram na rota do dia, para o produtor não passar a ignorar as notificações.
 
-Adotar uma arquitetura modular e simples durante o MVP, evitando over-engineering prematuro. A generalização e a expansão da arquitetura devem ocorrer conforme novas necessidades forem confirmadas.
+### 10.6 Flexibilidade vs. Manutenibilidade
 
-11. Indicadores de Desempenho Operacional (KPIs)
-Indicador	O que mede	Fórmula / Método
-Taxa de No-Show	Percentual de pacientes que não comparecem aos atendimentos, servindo como linha de base para avaliar a eficácia dos lembretes.	(Faltas / Total de agendamentos) × 100
-Taxa de Ocupação da Agenda	Aproveitamento da capacidade de atendimento disponível.	(Horários ocupados / Horários disponíveis) × 100
-Tempo Médio de Atendimento na Recepção	Eficiência do atendimento realizado pela recepção.	Tempo entre a chegada do paciente e sua alteração para o status "Em Espera".
-Tempo Médio de Espera do Paciente	Tempo de espera do paciente antes do início do atendimento.	Tempo entre a alteração para "Em Espera" e o início do atendimento.
-Índice de Retrabalho no Cadastro	Eficácia da centralização e qualidade dos dados cadastrais.	Número de ocorrências de recadastro ou correção de dados.
-Índice de Disponibilidade	Cumprimento da meta de disponibilidade definida na RNF03.	Monitoramento contínuo do percentual de disponibilidade do sistema.
-Tempo de Resposta de Busca	Cumprimento da meta de desempenho definida na RNF01.	Percentil 95 (P95) do tempo de resposta das operações de busca.
+Arquitetura modular e simples no MVP, focada em uma cultura e um tipo de anomalia (queda de vigor). Novas culturas e novos tipos de anomalia entram conforme a validação com os produtores.
+
+## 11. Indicadores de Desempenho (KPIs)
+
+| Indicador | O que mede | Fórmula / Método |
+| ----- | ----- | ----- |
+| Precisão dos alertas | Quantos pontos da rota realmente tinham problema | (Pontos confirmados em campo / Pontos visitados) × 100 |
+| Tempo de detecção | Quanto antes o problema é encontrado | Dias entre o início da anomalia na imagem e a confirmação em campo |
+| Área percorrida por inspeção | Economia de deslocamento | Hectares percorridos por semana, antes e depois do uso |
+| Rotas abertas | Engajamento com a funcionalidade central | (Dias com rota aberta / Dias com rota disponível) × 100 |
+| Fazendas ativas por semana | Uso recorrente do produto | Fazendas com pelo menos uma rota aberta na semana |
+| Retenção entre safras | Valor percebido ao longo do tempo | (Produtores ativos na safra seguinte / Produtores ativos na safra atual) × 100 |
+| Tempo de abertura da rota | Cumprimento da meta da RNF02 | Percentil 95 (P95) do tempo de carregamento no aparelho |
