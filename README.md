@@ -27,7 +27,7 @@
 
 Repositório das atividades em grupo da disciplina de **Engenharia de Requisitos** do Centro Universitário de Brasília (CEUB), turma A, 2º semestre de 2026.
 
-Cada pasta segue a mesma estrutura do [repositório da disciplina](https://github.com/kadidjaoliveira-tech/Engenharia_de_Requisitos_TurmaA): a professora publica o enunciado e o grupo entrega a resolução no mesmo caminho. Ao longo do semestre o grupo passou por todas as etapas do processo: quem usa o sistema, quais são os requisitos de negócio, como medir qualidade, como modelar com casos de uso e, no fim, como apresentar um produto em formato de pitch.
+As pastas seguem os temas do [repositório da disciplina](https://github.com/kadidjaoliveira-tech/Engenharia_de_Requisitos_TurmaA): a professora publica o enunciado e o grupo entrega a resolução no mesmo caminho. Ao longo do semestre o grupo passou por todas as etapas do processo: quem usa o sistema, quais são os requisitos de negócio, como medir qualidade, como modelar com casos de uso e, no fim, como apresentar um produto em formato de pitch.
 
 ## 📚 Atividades
 
@@ -37,7 +37,7 @@ Cada pasta segue a mesma estrutura do [repositório da disciplina](https://githu
 | 2 | 11/08 | [Análise de negócio com BABOK](Analise_Negocio/Atividade_BABOK.md) | Problema, requisitos de negócio, arquitetura e stakeholders | ✅ |
 | 3 | 18/08 | [Clínica médica: MVP](VisaoGeral/ClinicaMedica_MVP.md) e [especificação](VisaoGeral/ClinicaMedica_Formulario.md) | Regras de negócio, RFs, RNFs, MoSCoW, rastreabilidade e LGPD | ✅ |
 | 4 | 08/09 | [Qualidade com a ISO/IEC 25010](ISO_IEC_25010/Atividade.md) | Avaliação de um sistema acadêmico, conflitos de qualidade e exercícios | ✅ |
-| 5 | 22/09 | [Do requisito ao diagrama de casos de uso](Unidade5_Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend e rastreabilidade | ✅ |
+| 5 | 22/09 | [Do requisito ao diagrama de casos de uso](Unidade5/Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend e rastreabilidade | ✅ |
 | 6 | 29/09 | [Elicitação de requisitos: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/Atividade.md) | Stakeholders, early adopter, canais, RNFs, trade-offs e KPIs | ✅ |
 | 7 | 10/11 | [Pitch do produto: AGROAI](Unidade5/README.md) | Lean Canvas, caso de uso, diagrama de classes, equipe ágil e MVP | ✅ |
 
@@ -75,13 +75,13 @@ O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md).
 │   └── Atividade_BABOK.md                  # 2. Análise de negócio com BABOK v3
 ├── ISO_IEC_25010/
 │   └── Atividade.md                        # 4. Qualidade de software
-├── Unidade5_Modelagem_de_Sistemas/
-│   ├── DorequisitoaoDiagramadeCasosdeUso.md   # 5. Do requisito ao diagrama de casos de uso
-│   └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso feito em aula
 ├── Unidade5/
 │   ├── README.md                           # 7. Pitch do produto AGROAI
-│   └── ElicitacaoRequisitos/
-│       └── Atividade.md                    # 6. Elicitação do sistema agrícola
+│   ├── ElicitacaoRequisitos/
+│   │   └── Atividade.md                    # 6. Elicitação do sistema agrícola
+│   └── Modelagem_de_Sistemas/
+│       ├── DorequisitoaoDiagramadeCasosdeUso.md   # 5. Do requisito ao diagrama de casos de uso
+│       └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso feito em aula
 ├── assets/
 │   └── banner.svg
 ├── LICENSE
