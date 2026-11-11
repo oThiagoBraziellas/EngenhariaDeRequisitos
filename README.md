@@ -14,18 +14,12 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 ├── ISO_IEC_25010/
 │   └── Atividade.md                        # Exercícios de qualidade de software e conflitos de qualidade
 ├── Unidade5/
-│   ├── README.md                           # Índice da unidade
+│   ├── README.md                           # Pitch do produto AGROAI (Lean Canvas, requisitos, caso de uso, classes, equipe, MVP)
 │   ├── ElicitacaoRequisitos/
 │   │   └── Atividade.md                    # Stakeholders, early adopters, RNFs, MoSCoW e KPIs do sistema agrícola
-│   ├── Modelagem_de_Sistemas/
-│   │   ├── DorequisitoaoDiagramadeCasosdeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
-│   │   └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso feito em aula
-│   └── Pitch_AGROAI/
-│       ├── README.md                       # Pitch do produto (Lean Canvas, requisitos, caso de uso, classes, equipe, MVP)
-│       ├── AGROAI_Pitch.pdf / .html        # Slides do pitch
-│       ├── AGROAI_ApresentacaoCanva.pdf    # Apresentação visual feita no Canva
-│       ├── DiagramaCasosDeUso_AGROAI.svg   # Diagrama de casos de uso do produto
-│       └── RoteiroApresentacao.md          # Divisão dos slides e roteiro de fala
+│   └── Modelagem_de_Sistemas/
+│       ├── DorequisitoaoDiagramadeCasosdeUso.md   # Atores, casos de uso, relacionamentos e rastreabilidade
+│       └── DiagramaCasosDeUso_FazendasIA.jpeg     # Diagrama de casos de uso feito em aula
 ├── VisaoGeral/
 │   ├── Atividade.md                        # Primeira atividade: usuários, RFs e RNFs
 │   ├── ClinicaMedica_MVP.md                # Escopo do MVP da clínica médica
@@ -44,7 +38,7 @@ Atividades da disciplina de **Engenharia de Requisitos** do Centro Universitári
 | Análise de negócio | [BABOK: gestão interna](Analise_Negocio/Atividade_BABOK.md) | Problema, solução, requisitos de negócio, stack, arquitetura e stakeholders |
 | Qualidade | [ISO/IEC 25010](ISO_IEC_25010/Atividade.md) | Avaliação de um sistema acadêmico e análise de conflitos de qualidade |
 | Unidade 5 | [Elicitação: monitoramento agrícola](Unidade5/ElicitacaoRequisitos/Atividade.md) | Stakeholders, early adopter, problemas, canais, RNFs, MoSCoW e métricas |
-| Unidade 5 | [Pitch do produto: AGROAI](Unidade5/Pitch_AGROAI/README.md) | Lean Canvas, RFs e RNFs, caso de uso especificado, diagrama de classes, equipe ágil, MVP e slides em [PDF](Unidade5/Pitch_AGROAI/AGROAI_Pitch.pdf), [HTML](Unidade5/Pitch_AGROAI/AGROAI_Pitch.html) e a [apresentação do Canva](Unidade5/Pitch_AGROAI/AGROAI_ApresentacaoCanva.pdf) |
+| Unidade 5 | [Pitch do produto: AGROAI](Unidade5/README.md) | Abertura, problema, solução, Lean Canvas, RFs e RNFs, caso de uso especificado, diagramas de casos de uso e de classes, equipe ágil, MVP, conclusão e checklist |
 | Unidade 5 | [Do requisito ao diagrama de casos de uso](Unidade5/Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md) | Atores, casos de uso, include/extend, regras e checklist |
 
 ## Referências usadas
