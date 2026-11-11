@@ -79,6 +79,8 @@ O pitch completo está em [`Unidade5/README.md`](Unidade5/README.md) e a identid
 │   ├── README.md                           # 7. Pitch do produto AGROAI
 │   ├── BrandBook/
 │   │   └── BrandBook_AGROAI.pdf / .html    # Identidade visual do AGROAI
+│   ├── LeanCanvas/
+│   │   └── LeanCanvas_AGROAI.png / .html   # Lean Canvas visual do AGROAI
 │   ├── ElicitacaoRequisitos/
 │   │   └── Atividade.md                    # 6. Elicitação do sistema agrícola
 │   └── Modelagem_de_Sistemas/

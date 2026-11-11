@@ -48,6 +48,10 @@ Um aplicativo de celular que:
 
 ## 4. Lean Canvas
 
+![Lean Canvas do AGROAI](LeanCanvas/LeanCanvas_AGROAI.png)
+
+Versão visual feita pelo grupo no Figma: [imagem](LeanCanvas/LeanCanvas_AGROAI.png) e [HTML](LeanCanvas/LeanCanvas_AGROAI.html). O resumo em texto dos 9 blocos está na tabela abaixo.
+
 | Bloco | AGROAI |
 |---|---|
 | **Problema** | Monitoramento incompleto; detecção tardia de pragas, doenças e estresse hídrico; alto custo de inspeção presencial |

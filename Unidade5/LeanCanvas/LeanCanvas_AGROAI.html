@@ -1,0 +1,75 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lean Canvas · AGROAI</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+h1,h2,h3,p,strong{font:inherit}
+strong{font-weight:700}
+:root{color:#183128;background:#f3f0e7;font-family:'Manrope',sans-serif;font-synthesis:none}
+body{min-width:320px;background-color:#f3f0e7;background-image:radial-gradient(rgba(38,70,56,.18) .8px,transparent .8px);background-size:18px 18px}
+.page-shell{width:1240px;margin:0 auto;padding:20px 0 36px}
+.topbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;min-height:72px;border-bottom:1px solid rgba(24,49,40,.2)}
+.brand{display:inline-flex;align-items:center;width:fit-content;gap:11px;color:#183128;text-decoration:none;font-size:24px;font-weight:800;letter-spacing:-.055em}
+.brand-mark{display:grid;width:36px;height:36px;place-items:center;border-radius:9px;color:#183128;background:#f1d87c;box-shadow:0 4px 0 #183128;font-size:17px;font-weight:800;letter-spacing:-.04em}
+.brand>span:last-child{border-radius:7px;padding:6px 9px;color:#f7f1db;background:#183128}
+.team-list{display:flex;align-items:center;justify-content:center;gap:7px}
+.team-list span{border:1px solid rgba(24,49,40,.22);border-radius:999px;padding:7px 10px;color:#29483c;background:rgba(255,255,255,.62);box-shadow:0 2px 0 rgba(24,49,40,.08);font-size:10px;font-weight:700;white-space:nowrap}
+.status-pill{display:inline-flex;align-items:center;justify-self:end;gap:8px;border:1px solid rgba(24,49,40,.25);border-radius:999px;padding:7px 11px;color:#495c54;background:rgba(255,255,255,.35);font-size:11px;font-weight:700}
+.status-pill span{width:6px;height:6px;border-radius:50%;background:#ea7c52}
+.intro{display:grid;grid-template-columns:1.45fr .55fr;align-items:end;gap:48px;padding:48px 3px 30px}
+.eyebrow{margin-bottom:6px;color:#65756e;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.intro h1{color:#183128;font-size:90px;font-weight:700;letter-spacing:-.075em;line-height:.92}
+.intro h1 span{color:#d6b93f}
+.intro-copy{max-width:420px;padding-bottom:6px;color:#53635d;font-size:15px;line-height:1.65}
+.canvas-wrap{padding:8px;border:1px solid rgba(24,49,40,.2);border-radius:18px;background:rgba(246,244,237,.78);box-shadow:0 24px 80px rgba(48,56,47,.12)}
+.canvas-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) 1.1fr;grid-template-rows:460px 330px 250px;grid-template-areas:'problem solution value advantage segments' 'problem metrics value channels segments' 'costs costs revenue revenue revenue';gap:8px}
+.canvas-block{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid rgba(24,49,40,.14);border-radius:11px;background:#e6ebe2}
+.problem{grid-area:problem}.solution{grid-area:solution}.value{grid-area:value;color:#f7f1db;background:#183128}.advantage{grid-area:advantage}.segments{grid-area:segments}.key-metrics{grid-area:metrics}.channels{grid-area:channels}.costs{grid-area:costs}.revenue{grid-area:revenue}
+.block-title{display:flex;align-items:baseline;gap:10px;flex:0 0 auto;min-height:49px;padding:14px 16px 12px;border-bottom:1px solid rgba(24,49,40,.42)}
+.value .block-title{border-color:rgba(247,241,219,.35)}
+.block-title span{color:#a37827;font-size:10px;font-weight:800;letter-spacing:.1em}
+.block-title h2{font-size:13px;font-weight:800;letter-spacing:-.02em}
+.block-content{display:flex;min-height:0;flex:1;flex-direction:column;padding:12px}
+.note-stack{display:grid;gap:8px}
+.note{position:relative;padding:15px;border:1px solid rgba(24,49,40,.1);border-radius:6px;background:#f7f5ed;box-shadow:0 2px 0 rgba(24,49,40,.05)}
+.note--sage{background:#cbd9c2}.note--sun{background:#f2dda0}.note--clay{background:#e9c1a9}
+.note__label{display:inline-block;margin-bottom:8px;border-radius:3px;padding:3px 6px;color:#f7f1db;background:#183128;font-size:8px;font-weight:800;letter-spacing:.11em}
+.note h3,.wide-notes h3{margin-bottom:5px;color:#183128;font-size:12px;font-weight:800;line-height:1.25}
+.note p,.wide-notes p{color:#4c6057;font-size:10.5px;line-height:1.48}
+.subsection{margin-top:auto;padding:16px 4px 4px;border-top:1px solid rgba(24,49,40,.2)}
+.subsection--accent{margin:auto -12px -12px;padding:16px;color:#f7f1db;background:#2e5545}
+.subsection-title{margin-bottom:7px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.compact-copy{color:#55675f;font-size:10.5px;line-height:1.5}
+.subsection--accent .compact-copy{color:#dce5da}
+.value .block-content{padding:24px 20px 18px}
+.value-statement{position:relative;padding-top:28px}
+.quote-mark{position:absolute;top:-18px;left:-4px;color:#d6b93f;font-size:72px;font-weight:800;line-height:1}
+.value-statement h3{position:relative;max-width:250px;font-size:30px;font-weight:700;letter-spacing:-.055em;line-height:1.08}
+.value-statement p{margin-top:18px;color:#c9d5cc;font-size:12px;line-height:1.65}
+.concept{display:grid;gap:6px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(247,241,219,.24)}
+.concept span{color:#d6b93f;font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.concept strong{font-size:14px;line-height:1.4}
+.metrics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
+.metric{display:flex;min-height:88px;flex-direction:column;justify-content:space-between;border-radius:6px;padding:12px;color:#f5f3e9;background:#2e5545}
+.metric span{color:#f1d87c;font-size:16px;font-weight:800;letter-spacing:-.04em}
+.metric strong{font-size:9px;line-height:1.3}
+.metric-footnote{margin-top:auto;padding-top:12px;color:#607168;font-size:9.5px;line-height:1.4}
+.channel-groups{display:grid;gap:9px}
+.channel-groups>div{padding:12px;border:1px solid rgba(24,49,40,.12);border-radius:6px;background:rgba(255,255,255,.46)}
+.channel-label{display:block;margin-bottom:5px;color:#a37827;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.channel-groups p{color:#465b51;font-size:10px;line-height:1.45}
+.wide-notes{display:grid;height:100%;grid-template-columns:repeat(3,1fr);gap:9px}
+.wide-notes .note{display:flex;flex-direction:column;justify-content:center;padding:20px}
+.revenue-model{display:grid;height:100%;grid-template-columns:1fr 1fr 1.1fr;gap:9px}
+.revenue-model>div{display:flex;flex-direction:column;justify-content:center;border-radius:6px;padding:20px;background:#f7f5ed}
+.revenue-model span{margin-bottom:8px;color:#9b7427;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.revenue-model strong{margin-bottom:6px;font-size:16px;letter-spacing:-.03em}
+.revenue-model p{color:#52655c;font-size:10px;line-height:1.45}
+.revenue-model .price-hypothesis{color:#f7f1db;background:#2e5545}
+.revenue-model .price-hypothesis span{color:#f1d87c}
+.revenue-model .price-hypothesis p{color:#e3eae2;font-size:12px;font-weight:600}
+footer{display:flex;justify-content:space-between;padding:20px 4px 0;color:#65756e;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+</style></head><body>
+<main class="page-shell"><header class="topbar"><a class="brand" href="#canvas"><span class="brand-mark">A</span><span>AGROAI</span></a>
+<div class="team-list"><span>Thiago Braziellas</span><span>Pedro Ryan</span><span>Luiz Claudio</span><span>Arthur Santos</span></div>
+<div class="status-pill"><span></span>Canvas em validação</div></header>
+<div class="intro"><div><p class="eyebrow">Monitoramento agrícola inteligente</p><h1>Lean Canvas<span>.</span></h1></div><p class="intro-copy">Direcionar a equipe para o lugar certo, no momento certo — antes que uma anomalia se transforme em perda de safra.</p></div>
+<div class="canvas-wrap" id="canvas"><div class="canvas-grid"><section class="canvas-block problem"><header class="block-title"><span>01</span><h2>Problema</h2></header><div class="block-content"><div class="note-stack"><article class="note note--clay"><h3>Detecção tardia</h3><p>Pragas, doenças e estresse hídrico são percebidos quando a perda já aconteceu.</p></article><article class="note"><h3>Monitoramento incompleto</h3><p>É inviável inspecionar toda a área cultivada com a frequência necessária.</p></article><article class="note"><h3>Operação cara</h3><p>Equipe, combustível e tempo são gastos em áreas sem necessidade de intervenção.</p></article></div><div class="subsection"><p class="subsection-title">Alternativas atuais</p><p class="compact-copy">Inspeção visual por amostragem, planilhas, grupos de mensagens e visitas presenciais sem priorização.</p></div></div></section><section class="canvas-block solution"><header class="block-title"><span>02</span><h2>Solução</h2></header><div class="block-content"><div class="note-stack"><article class="note note--sage"><span class="note__label">MVP</span><h3>Mapa de prioridade diário</h3><p>Alertas georreferenciados indicam onde a equipe deve inspecionar hoje.</p></article><article class="note"><h3>Validação no campo</h3><p>Registro simples por foto, categoria e status da ocorrência.</p></article><article class="note"><h3>Painel de evolução</h3><p>Histórico do talhão e acompanhamento das intervenções realizadas.</p></article></div></div></section><section class="canvas-block value"><header class="block-title"><span>04</span><h2>Proposta única de valor</h2></header><div class="block-content"><div class="value-statement"><span class="quote-mark">“</span><h3>Saiba onde ir hoje no campo.</h3><p>Monitoramento simples que transforma imagens e dados da lavoura em uma rota objetiva de inspeção.</p></div><div class="concept"><span>Conceito de alto nível</span><strong>Um radar diário para a sua lavoura.</strong></div></div></section><section class="canvas-block advantage"><header class="block-title"><span>05</span><h2>Vantagem injusta</h2></header><div class="block-content"><div class="note-stack"><article class="note note--sun"><h3>Dados regionais exclusivos</h3><p>Base histórica georreferenciada que melhora a cada validação em campo.</p></article><article class="note"><h3>Modelo calibrado no terreno</h3><p>IA especializada em culturas e microclimas locais.</p></article><article class="note"><h3>Rede técnica</h3><p>Agrônomos e produtores conectados por um ciclo contínuo de aprendizado.</p></article></div></div></section><section class="canvas-block segments"><header class="block-title"><span>07</span><h2>Segmentos de clientes</h2></header><div class="block-content"><div class="note-stack"><article class="note note--sage"><h3>Produtores de médio porte</h3><p>Gestores pressionados por margem, produtividade e escassez de mão de obra.</p></article><article class="note"><h3>Agrônomos e consultores</h3><p>Precisam priorizar visitas e diagnosticar com dados mais atuais.</p></article><article class="note"><h3>Cooperativas</h3><p>Parceiras na distribuição e na redução de riscos para seus cooperados.</p></article></div><div class="subsection subsection--accent"><p class="subsection-title">Early adopter</p><p class="compact-copy">Jovem gestor, já usa o celular na rotina, sofreu perda recente e busca tecnologia simples — sem treinamento extenso.</p></div></div></section><section class="canvas-block key-metrics"><header class="block-title"><span>03</span><h2>Métricas-chave</h2></header><div class="block-content"><div class="metrics-grid"><div class="metric"><span>≤ 24h</span><strong>Tempo até o alerta</strong></div><div class="metric"><span>% da lavoura</span><strong>Área monitorada</strong></div><div class="metric"><span>Precisão</span><strong>Alertas validados</strong></div><div class="metric"><span>Safras ativas</span><strong>Retenção</strong></div></div><p class="metric-footnote">Métrica norte: hectares protegidos antes do dano econômico.</p></div></section><section class="canvas-block channels"><header class="block-title"><span>06</span><h2>Canais</h2></header><div class="block-content"><div class="channel-groups"><div><span class="channel-label">Confiança</span><p>Agrônomos, cooperativas, indicação entre vizinhos e dias de campo.</p></div><div><span class="channel-label">Demanda</span><p>Conteúdo técnico, busca, anúncios geolocalizados e demonstrações em vídeo.</p></div><div><span class="channel-label">Distribuição</span><p>Venda consultiva leve e onboarding direto pelo smartphone.</p></div></div></div></section><section class="canvas-block costs"><header class="block-title"><span>08</span><h2>Estrutura de custos</h2></header><div class="block-content"><div class="wide-notes"><article class="note"><h3>Produto &amp; dados</h3><p>Desenvolvimento, IA, imagens, mapas e infraestrutura.</p></article><article class="note"><h3>Operação</h3><p>Equipe técnica, suporte, segurança e visitas de validação.</p></article><article class="note"><h3>Mercado</h3><p>Aquisição, eventos, parceiros e demonstrações regionais.</p></article></div></div></section><section class="canvas-block revenue"><header class="block-title"><span>09</span><h2>Fontes de receita</h2></header><div class="block-content"><div class="revenue-model"><div><span>Modelo principal</span><strong>Assinatura SaaS</strong><p>Planos por faixa de hectares monitorados.</p></div><div><span>Expansão</span><strong>Licença para parceiros</strong><p>Pacotes para cooperativas e consultorias.</p></div><div class="price-hypothesis"><span>Hipótese</span><p>Teste gratuito por um talhão, seguido de plano mensal por propriedade.</p></div></div></div></section></div></div>
+<footer><p>Hipóteses para validação — não são fatos.</p><p>Versão 01 · Monitoramento agrícola</p></footer></main></body></html>
