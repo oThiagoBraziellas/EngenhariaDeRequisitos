@@ -1,6 +1,6 @@
 # Unidade 5 - Pitch do Produto: AGROAI
 
-Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado na [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e na [Modelagem de Sistemas](Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md).
+Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado na [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e na [Modelagem de Sistemas](../Unidade5_Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md).
 
 **Sumário:** [1. Abertura](#1-slide-de-abertura) · [2. Problema](#2-problema-e-oportunidade) · [3. Solução](#3-solução-proposta) · [4. Lean Canvas](#4-lean-canvas) · [5. Requisitos](#5-requisitos-do-produto) · [6. Caso de uso](#6-especificação-de-caso-de-uso) · [7. Classes](#7-diagrama-de-classes) · [8. Equipe](#8-estrutura-da-equipe-ágil) · [9. MVP](#9-planejamento-do-mvp) · [10. Conclusão](#10-conclusão-do-pitch) · [11. Checklist](#11-checklist-final-para-apresentação)
 
@@ -133,7 +133,7 @@ flowchart LR
     style UC6 fill:#143c32,color:#ffffff,stroke:#143c32
 ```
 
-O diagrama amplia o da [atividade de modelagem](Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
+O diagrama amplia o da [atividade de modelagem](../Unidade5_Modelagem_de_Sistemas/DiagramaCasosDeUso_FazendasIA.jpeg) com os casos de uso centrais do produto: **Consultar a rota do dia** e **Registrar inspeção**.
 
 ### Especificação
 
