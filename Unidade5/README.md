@@ -2,6 +2,8 @@
 
 Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado na [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e na [Modelagem de Sistemas](Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md).
 
+**Apresentação:** [AGROAI_Pitch.pdf](Pitch/AGROAI_Pitch.pdf), 16 slides na ordem das 11 seções do roteiro.
+
 **Sumário:** [1. Abertura](#1-slide-de-abertura) · [2. Problema](#2-problema-e-oportunidade) · [3. Solução](#3-solução-proposta) · [4. Lean Canvas](#4-lean-canvas) · [5. Requisitos](#5-requisitos-do-produto) · [6. Caso de uso](#6-especificação-de-caso-de-uso) · [7. Classes](#7-diagrama-de-classes) · [8. Equipe](#8-estrutura-da-equipe-ágil) · [9. MVP](#9-planejamento-do-mvp) · [10. Conclusão](#10-conclusão-do-pitch) · [11. Checklist](#11-checklist-final-para-apresentação)
 
 ---
