@@ -78,8 +78,9 @@ A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf) 
 ├── Unidade5/
 │   ├── README.md                           # 7. Pitch do produto AGROAI
 │   ├── Pitch/
-│   │   ├── AGROAI_Pitch.pdf                # Apresentação do pitch (14 slides)
-│   │   └── AGROAI_Pitch.html               # Mesma apresentação em HTML
+│   │   ├── AGROAI_Pitch.pdf                # Apresentação do pitch (15 slides)
+│   │   ├── AGROAI_Pitch.html               # Mesma apresentação em HTML, com setas
+│   │   └── imagens/                        # Satélite real, telas do app e diagramas (SVG)
 │   ├── BrandBook/
 │   │   └── BrandBook_AGROAI.pdf / .html    # Identidade visual do AGROAI
 │   ├── LeanCanvas/
