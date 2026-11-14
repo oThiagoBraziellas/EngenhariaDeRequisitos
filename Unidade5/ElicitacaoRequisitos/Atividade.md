@@ -130,11 +130,11 @@ Para evitar a **"síndrome do tudo é urgente"**, cada requisito passou por um f
 
 Apenas os itens que passaram nesse teste foram classificados como **Must Have**. Resultado consolidado:
 
-* **7 requisitos funcionais Must** (RF01 a RF07): cadastro e login, fazenda e talhões no mapa, cultura e safra, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia e registro de inspeção.
+* **9 requisitos funcionais Must** (RF01 a RF07, RF12 e RF13): cadastro e login, fazenda e talhões no mapa, cultura e safra, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia, registro de inspeção e os modelos de IA (classificação das anomalias, recalibração pelas inspeções e gestão das versões pelo administrador). Sem os modelos de IA não existe rota do dia, só um mapa colorido.
 
 * **5 requisitos não funcionais Must** (RNF01 a RNF05): funcionamento offline, desempenho no 4G, uso sem treinamento, LGPD e criptografia.
 
-* **Total do MVP: 12 itens inegociáveis.**
+* **Total do MVP: 14 itens inegociáveis.**
 
 Alertas por WhatsApp, relatórios históricos e acesso do agrônomo ficaram como **Should Have**: o produtor consegue usar a rota do dia na V1 sem eles. Classificação de uso do solo e mapeamento de relevo ficaram como **Could Have**.
 

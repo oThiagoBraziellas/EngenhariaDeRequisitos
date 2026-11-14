@@ -61,7 +61,7 @@ flowchart LR
 | **MVP** | Fazenda e talhões no mapa, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia e inspeção offline. |
 | **Validação** | 5 produtores usando durante 30 dias numa safra. |
 
-A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf), o pitch em texto em [`Unidade5/README.md`](Unidade5/README.md) e a identidade visual no [Brand Book do AGROAI](Unidade5/BrandBook/BrandBook_AGROAI.pdf).
+A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf) (e em [HTML](Unidade5/Pitch/AGROAI_Pitch.html)), o pitch em texto em [`Unidade5/README.md`](Unidade5/README.md) e a identidade visual no [Brand Book do AGROAI](Unidade5/BrandBook/BrandBook_AGROAI.pdf).
 
 ## 🗂️ Estrutura
 
@@ -78,7 +78,8 @@ A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf),
 ├── Unidade5/
 │   ├── README.md                           # 7. Pitch do produto AGROAI
 │   ├── Pitch/
-│   │   └── AGROAI_Pitch.pdf                # Apresentação do pitch (16 slides)
+│   │   ├── AGROAI_Pitch.pdf                # Apresentação do pitch (14 slides)
+│   │   └── AGROAI_Pitch.html               # Mesma apresentação em HTML
 │   ├── BrandBook/
 │   │   └── BrandBook_AGROAI.pdf / .html    # Identidade visual do AGROAI
 │   ├── LeanCanvas/
