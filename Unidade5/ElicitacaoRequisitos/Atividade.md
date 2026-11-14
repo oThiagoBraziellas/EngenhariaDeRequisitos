@@ -130,13 +130,13 @@ Para evitar a **"síndrome do tudo é urgente"**, cada requisito passou por um f
 
 Apenas os itens que passaram nesse teste foram classificados como **Must Have**. Resultado consolidado:
 
-* **9 requisitos funcionais Must** (RF01 a RF07, RF12 e RF13): cadastro e login, fazenda e talhões no mapa, cultura e safra, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia, registro de inspeção e os modelos de IA (classificação das anomalias, recalibração pelas inspeções e gestão das versões pelo administrador). Sem os modelos de IA não existe rota do dia, só um mapa colorido.
+* **11 requisitos funcionais Must** (RF01 a RF11): cadastro e login, fazenda, talhões no mapa, cultura e safra, imagens de satélite sem nuvem, NDVI, os modelos de IA (detectar as áreas fora do padrão, classificar o tipo e a severidade, prever o risco de pragas e gerar a rota do dia) e o registro de inspeção com foto. Sem os modelos de IA não existe rota do dia, só um mapa colorido.
 
 * **5 requisitos não funcionais Must** (RNF01 a RNF05): funcionamento offline, desempenho no 4G, uso sem treinamento, LGPD e criptografia.
 
-* **Total do MVP: 14 itens inegociáveis.**
+* **Total do MVP: 16 itens inegociáveis.**
 
-Alertas por WhatsApp, relatórios históricos e acesso do agrônomo ficaram como **Should Have**: o produtor consegue usar a rota do dia na V1 sem eles. Classificação de uso do solo e mapeamento de relevo ficaram como **Could Have**.
+Recalibração do modelo, alerta push, GPS até o ponto, histórico do talhão, acesso e resumo para o agrônomo e o painel do modelo ficaram como **Should Have** (RF12 a RF18): o produtor consegue usar a rota do dia na V1 sem eles. WhatsApp, relatório em PDF, importação do CAR, uso do solo, relevo e chat com IA ficaram como **Could Have** (RF19 a RF24). Drones, integração com cooperativas e recomendação de defensivo ficaram como **Won't Have** nesta versão (RF25 a RF27). A lista completa dos 27 requisitos está no [pitch da Unidade 5](../README.md#5-requisitos-do-produto).
 
 ## 8. Equilíbrio Financeiro e Métricas
 
