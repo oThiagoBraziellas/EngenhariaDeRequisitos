@@ -2,7 +2,7 @@
 
 Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto é o sistema de análise de fazendas com satélite e IA levantado na [Elicitação de Requisitos](ElicitacaoRequisitos/Atividade.md) e na [Modelagem de Sistemas](Modelagem_de_Sistemas/DorequisitoaoDiagramadeCasosdeUso.md).
 
-**Apresentação:** [AGROAI_Pitch.pdf](Pitch/AGROAI_Pitch.pdf), 16 slides na ordem das 11 seções do roteiro.
+**Apresentação:** [AGROAI_Pitch.pdf](Pitch/AGROAI_Pitch.pdf) (também em [HTML](Pitch/AGROAI_Pitch.html)), 14 slides na ordem das 11 seções do roteiro.
 
 **Sumário:** [1. Abertura](#1-slide-de-abertura) · [2. Problema](#2-problema-e-oportunidade) · [3. Solução](#3-solução-proposta) · [4. Lean Canvas](#4-lean-canvas) · [5. Requisitos](#5-requisitos-do-produto) · [6. Caso de uso](#6-especificação-de-caso-de-uso) · [7. Classes](#7-diagrama-de-classes) · [8. Equipe](#8-estrutura-da-equipe-ágil) · [9. MVP](#9-planejamento-do-mvp) · [10. Conclusão](#10-conclusão-do-pitch) · [11. Checklist](#11-checklist-final-para-apresentação)
 
@@ -14,7 +14,7 @@ Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto
 - **Identidade visual:** logo, cores, tipografia e aplicações no [Brand Book do AGROAI](BrandBook/BrandBook_AGROAI.pdf) (também em [HTML](BrandBook/BrandBook_AGROAI.html))
 - **Proposta de valor:**
   > "O AGROAI ajuda pequenos e médios produtores rurais a encontrar problemas na lavoura antes que virem prejuízo, por meio de imagens de satélite e IA que mostram onde ir hoje."
-- **Integrantes:** Thiago Braziellas, Arthur Santos, Luiz Claudio e Pedro Ryan
+- **Integrantes:** Thiago Braziellas (Product Owner), Luiz Claudio (Scrum Master), Arthur Santos (Requisitos e UX) e Pedro Ryan (Desenvolvimento e testes)
 
 ## 2. Problema e oportunidade
 
@@ -42,7 +42,7 @@ Entrega da Unidade 5 seguindo a estrutura de pitch deck da disciplina. O produto
 Um aplicativo de celular que:
 1. Recebe o contorno da fazenda e dos talhões desenhados no mapa.
 2. Busca automaticamente as imagens de satélite mais recentes e calcula o vigor da vegetação.
-3. Usa IA para apontar onde a lavoura está fora do padrão (estresse hídrico, pragas, erosão, falhas).
+3. Usa modelos de IA para apontar e classificar onde a lavoura está fora do padrão (estresse hídrico, pragas, erosão, falhas).
 4. Entrega a **rota do dia**: a lista dos pontos que valem uma visita, em ordem de prioridade, com o caminho no mapa.
 5. Recebe a confirmação de quem foi ao ponto (foto e observação), e esse retorno ensina o modelo a errar menos.
 
@@ -79,11 +79,14 @@ Versão visual feita pelo grupo no Figma: [imagem](LeanCanvas/LeanCanvas_AGROAI.
 | RF05 | O sistema deve calcular o vigor da vegetação (NDVI) e detectar áreas fora do padrão do talhão. | Must |
 | RF06 | O sistema deve gerar a rota do dia com os pontos críticos ordenados por prioridade. | Must |
 | RF07 | O sistema deve permitir registrar a inspeção de um ponto com foto, confirmação e observação. | Must |
+| RF13 | O sistema deve usar modelos de IA para classificar cada anomalia (estresse hídrico, praga, erosão, falha de plantio) e recalibrá-los com as inspeções confirmadas em campo. | Must |
+| RF12 | O administrador deve poder gerenciar, avaliar e publicar versões dos modelos de IA. | Must |
 | RF08 | O sistema deve enviar alerta ao produtor e ao agrônomo quando surgir uma anomalia grave. | Should |
 | RF09 | O sistema deve exibir relatórios por talhão com o histórico de vigor e de ocorrências. | Should |
 | RF10 | O sistema deve permitir que o produtor dê acesso à fazenda a um agrônomo. | Should |
 | RF11 | O sistema deve classificar o uso do solo e mapear relevo e terreno. | Could |
-| RF12 | O administrador deve poder gerenciar e atualizar os modelos de IA. | Could |
+
+**Por que os modelos de IA são Must (RF12 e RF13):** sem eles não existe rota do dia, só um mapa colorido. O sistema não saberia o tipo de cada problema nem a prioridade de cada ponto. Resultado: 9 requisitos Must, 3 Should e 1 Could.
 
 ### Requisitos não funcionais (ISO/IEC 25010:2023)
 
@@ -116,7 +119,8 @@ flowchart LR
         UC7(["Registrar inspeção"])
         UC9(["Ver relatórios e alertas"])
         UC10(["Monitorar vegetação"])
-        UCA(["Detectar anomalias"])
+        UCA(["Detectar e classificar anomalias com IA"])
+        UCR(["Recalibrar modelo de IA"])
         UCI(["Obter imagens de satélite"])
         UCE(["Enviar alertas"])
         UCM(["Gerenciar modelos de IA"])
@@ -133,7 +137,9 @@ flowchart LR
     UCA -. "«include»" .-> UCI
     UC10 -. "«include»" .-> UCI
     UC7 -. "«extend»" .-> UC6
+    UC7 -. "«include»" .-> UCR
     UCE -. "«extend»" .-> UCA
+    UCM -. "«include»" .-> UCR
     UCI --- SAT
     UCM --- ADM
 
@@ -150,11 +156,11 @@ O diagrama amplia o da [atividade de modelagem](Modelagem_de_Sistemas/DiagramaCa
 | **Ator principal** | Produtor rural ou encarregado de campo |
 | **Atores secundários** | Provedor de satélite, agrônomo |
 | **Objetivo** | Saber quais pontos da lavoura visitar hoje e registrar o que foi encontrado |
-| **Pré-condições** | Usuário autenticado; fazenda com talhões, cultura e safra cadastrados; pelo menos uma imagem processada |
+| **Pré-condições** | Usuário autenticado; fazenda com talhões, cultura e safra cadastrados; pelo menos uma imagem já analisada pelo modelo de IA |
 | **Gatilho** | O usuário abre o aplicativo e toca em "Rota de hoje" |
 
 **Fluxo principal**
-1. O sistema mostra a data da última imagem e a lista de pontos críticos em ordem de prioridade.
+1. O sistema mostra a data da última imagem e a lista de pontos críticos, já classificados pelo modelo de IA, em ordem de prioridade.
 2. O usuário toca em "Iniciar rota".
 3. O sistema mostra o caminho no mapa até o primeiro ponto.
 4. No ponto, o usuário tira uma foto e informa se o problema foi confirmado e qual é.
@@ -165,7 +171,7 @@ O diagrama amplia o da [atividade de modelagem](Modelagem_de_Sistemas/DiagramaCa
 - **A1 - Nenhum ponto crítico:** no passo 1, o sistema informa "Nenhum ponto precisa de visita hoje" e mostra quando chega a próxima imagem.
 - **A2 - Imagem coberta por nuvens:** no passo 1, o sistema usa a última imagem válida e avisa a data dela.
 - **A3 - Sem internet no campo:** nos passos 4 e 5, a inspeção fica salva no aparelho e é enviada quando o sinal voltar (RNF01).
-- **A4 - Problema não encontrado:** no passo 4, o usuário marca "Não encontrei nada"; o ponto vira falso positivo e serve para recalibrar o modelo.
+- **A4 - Problema não encontrado:** no passo 4, o usuário marca "Não encontrei nada"; o ponto vira falso positivo e serve para recalibrar o modelo (RF13).
 
 **Pós-condições:** as inspeções ficam registradas no histórico do talhão, os pontos visitados saem da rota e o modelo recebe o retorno de campo.
 
@@ -205,11 +211,20 @@ classDiagram
         +string fonte
         +float coberturaNuvens
     }
+    class ModeloIA {
+        +string versao
+        +string cultura
+        +float precisao
+        +date treinadoEm
+        +classificar()
+        +recalibrar()
+    }
     class Anomalia {
         +int id
         +TipoAnomalia tipo
         +Ponto local
         +int severidade
+        +float confianca
         +Status status
     }
     class Rota {
@@ -237,22 +252,25 @@ classDiagram
     Talhao "1" --> "0..*" Safra : tem
     Talhao "1" --> "0..*" ImagemSatelite : recebe
     ImagemSatelite "1" --> "0..*" Anomalia : revela
+    ModeloIA "1" --> "0..*" Anomalia : classifica
+    Usuario "1" --> "0..*" ModeloIA : gerencia (admin)
+    Inspecao "0..*" --> "1" ModeloIA : recalibra
     Rota "0..*" --> "1..*" Anomalia : visita
     Usuario "1" --> "0..*" Rota : percorre
     Anomalia "1" --> "0..1" Inspecao : verificada por
     Anomalia "1" --> "0..*" Alerta : dispara
 ```
 
-**Leitura do diagrama:** o produtor possui fazendas, que contêm talhões. Cada talhão tem safras e recebe imagens de satélite. Cada imagem pode revelar anomalias, que entram na rota do dia, disparam alertas e são verificadas por uma inspeção em campo.
+**Leitura do diagrama:** o produtor possui fazendas, que contêm talhões. Cada talhão tem safras e recebe imagens de satélite. Cada imagem pode revelar anomalias, que o modelo de IA classifica. As anomalias entram na rota do dia, disparam alertas e são verificadas por uma inspeção em campo, e cada inspeção recalibra o modelo. O administrador gerencia as versões do modelo.
 
 ## 8. Estrutura da equipe ágil
 
 | Papel | Responsável | O que faz |
 |---|---|---|
-| Product Owner | Pedro Ryan | Representa o produtor, mantém e prioriza o backlog (MoSCoW) |
+| Product Owner | Thiago Braziellas | Representa o produtor, mantém o backlog, decide as prioridades MoSCoW e valida cada entrega com o produtor parceiro |
 | Scrum Master | Luiz Claudio | Conduz as cerimônias, remove impedimentos e cuida do ritmo das sprints |
-| Analista de requisitos e UX | Arthur Santos | Entrevista os early adopters, escreve casos de uso e critérios de aceite, desenha as telas |
-| Desenvolvimento e testes | Thiago Braziellas, com apoio de todo o time | Implementa as funcionalidades, testa no campo e valida os critérios de aceite |
+| Analista de requisitos e UX | Arthur Santos | Entrevista os early adopters, escreve casos de uso e critérios de aceite, desenha as telas e testa a usabilidade |
+| Desenvolvimento e testes | Pedro Ryan, com apoio de todo o time | Implementa app, servidor e integração dos modelos de IA, testa no campo e valida os critérios de aceite |
 
 **Como o time trabalha:** sprints de 2 semanas; planejamento, daily de 15 min, revisão com um produtor parceiro e retrospectiva. Cada história só é "pronta" quando passa nos critérios de aceite e é testada no celular, sem internet.
 
@@ -266,11 +284,13 @@ O MVP valida uma única hipótese: **a rota do dia faz o produtor achar problema
 | Fazenda e talhões no mapa (RF02) | Relatórios históricos (RF09) |
 | Cultura e safra (RF03) | Acesso do agrônomo (RF10) |
 | Imagens Sentinel-2 automáticas (RF04) | Uso do solo, relevo e terreno (RF11) |
-| Vigor da vegetação e áreas fora do padrão (RF05) | Gestão dos modelos de IA (RF12) |
-| Rota do dia (RF06) | Drones e previsão de pragas |
-| Inspeção com foto, offline (RF07) | Integração com cooperativas |
+| Vigor da vegetação e áreas fora do padrão (RF05) | Drones e previsão de pragas |
+| Rota do dia (RF06) | Integração com cooperativas |
+| Inspeção com foto, offline (RF07) | |
+| Modelo de IA para uma cultura (soja) e um tipo de anomalia (queda de vigor), recalibrado pelas inspeções (RF13) | |
+| Painel simples do administrador para ver a precisão e publicar nova versão do modelo (RF12) | |
 
-**Como validar:** 5 produtores early adopters usando durante 30 dias numa safra. Medimos a % de pontos confirmados em campo, o tempo gasto em inspeção antes e depois e se continuam abrindo a rota toda semana.
+**Como validar:** 5 produtores early adopters usando durante 30 dias numa safra. Medimos a % de pontos confirmados em campo (precisão do modelo de IA), o tempo gasto em inspeção antes e depois e se continuam abrindo a rota toda semana.
 
 ## 10. Conclusão do pitch
 
@@ -278,7 +298,7 @@ O MVP valida uma única hipótese: **a rota do dia faz o produtor achar problema
 |---|---|
 | Qual é o problema? | O produtor descobre pragas, falhas e falta de água tarde demais, porque não consegue olhar toda a lavoura. |
 | Para quem é a solução? | Pequenos e médios produtores, começando pelo jovem gestor que já usa o celular no campo. |
-| Como ela funciona? | Satélite + IA encontram as áreas fora do padrão e o app transforma isso numa rota do dia. |
+| Como ela funciona? | Satélite e modelos de IA encontram e classificam as áreas fora do padrão, e o app transforma isso numa rota do dia. |
 | Por que é importante? | Menos perda de safra, menos custo de inspeção e acesso à agricultura de precisão sem equipamento caro. |
 | Como a equipe vai desenvolver e validar? | Scrum com sprints de 2 semanas e um MVP testado por 5 produtores durante 30 dias. |
 
