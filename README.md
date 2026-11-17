@@ -121,7 +121,7 @@ A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf) 
   </tr>
 </table>
 
-Nathan Andrade participou da atividade de análise de negócio com BABOK.
+
 
 ## 📄 Licença
 
