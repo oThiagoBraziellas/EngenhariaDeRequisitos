@@ -6,6 +6,18 @@ Entrega da Unidade 5 seguindo a [estrutura de pitch deck da disciplina](https://
 
 **Sumário:** [1. Abertura](#1-slide-de-abertura) · [2. Problema](#2-problema-e-oportunidade) · [3. Solução](#3-solução-proposta) · [4. Lean Canvas](#4-lean-canvas) · [5. Requisitos](#5-requisitos-do-produto) · [6. Casos de uso](#6-especificação-de-caso-de-uso) · [7. Classes](#7-diagrama-de-classes) · [8. Equipe](#8-estrutura-da-equipe-ágil) · [9. MVP](#9-planejamento-do-mvp) · [10. Conclusão](#10-conclusão-do-pitch) · [11. Checklist](#11-checklist-final-para-apresentação)
 
+## 👥 Equipe
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/oThiagoBraziellas"><img src="https://github.com/oThiagoBraziellas.png?size=100" width="80" alt=""><br><b>Thiago Braziellas</b></a></td>
+    <td align="center"><a href="https://github.com/arthursantos12-ceub"><img src="https://github.com/arthursantos12-ceub.png?size=100" width="80" alt=""><br><b>Arthur Santos</b></a></td>
+    <td align="center"><a href="https://github.com/lluiz22"><img src="https://github.com/lluiz22.png?size=100" width="80" alt=""><br><b>Luiz Claudio</b></a></td>
+    <td align="center"><a href="https://github.com/PedroRLMDF"><img src="https://github.com/PedroRLMDF.png?size=100" width="80" alt=""><br><b>Pedro Ryan</b></a></td>
+  </tr>
+</table>
+
+
 ---
 
 ## 1. Slide de abertura
