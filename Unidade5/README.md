@@ -361,6 +361,8 @@ classDiagram
 
 O MVP valida uma hipótese: **a rota do dia faz o produtor achar os problemas antes e andar menos.**
 
+O app do MVP já roda no navegador: veja [`MVP/`](MVP/README.md), com as telas, os requisitos atendidos e como rodar na sua máquina.
+
 | Entra no MVP (os 11 Must) | Fica para depois |
 |---|---|
 | Cadastro e login (RF01) | Recalibração do modelo (RF12) |

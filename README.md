@@ -61,6 +61,8 @@ flowchart LR
 | **MVP** | Fazenda e talhões no mapa, imagens de satélite automáticas, detecção de áreas fora do padrão, rota do dia e inspeção offline. |
 | **Validação** | 5 produtores usando durante 30 dias numa safra. |
 
+O **MVP funcional** roda no navegador e está em [`Unidade5/MVP`](Unidade5/MVP/README.md), com o passo a passo para rodar na sua máquina.
+
 A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf) (e em [HTML](Unidade5/Pitch/AGROAI_Pitch.html)), o pitch em texto em [`Unidade5/README.md`](Unidade5/README.md) e a identidade visual no [Brand Book do AGROAI](Unidade5/BrandBook/BrandBook_AGROAI.pdf).
 
 ## 🗂️ Estrutura
@@ -77,6 +79,7 @@ A apresentação está em [`AGROAI_Pitch.pdf`](Unidade5/Pitch/AGROAI_Pitch.pdf) 
 │   └── Atividade.md                        # 4. Qualidade de software
 ├── Unidade5/
 │   ├── README.md                           # 7. Pitch do produto AGROAI
+│   ├── MVP/                                # App web do AGROAI (React + mapa de satélite), com README de como rodar
 │   ├── Pitch/
 │   │   ├── AGROAI_Pitch.pdf                # Apresentação do pitch (15 slides)
 │   │   ├── AGROAI_Pitch.html               # Mesma apresentação em HTML, com setas
