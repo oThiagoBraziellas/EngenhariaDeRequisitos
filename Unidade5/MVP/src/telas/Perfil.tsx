@@ -25,6 +25,7 @@ export function Perfil() {
     setTimeout(() => URL.revokeObjectURL(a.href), 2000); registra('baixou os dados da fazenda')
   }
   const apagar = () => { zera(); vai('hoje') }
+  const sair = () => { registra('saiu'); muda(() => ({ entrou: false })); vai('hoje') }
 
   return (
     <div className="pagina estreita perfil">
@@ -47,6 +48,8 @@ export function Perfil() {
       <ul className="cfg">
         <li><div><b>Mapas para usar sem sinal</b><span>{e.mapasOff ? 'Baixados · 6 cenas · 0,8 MB' : 'Baixa as imagens da fazenda no Wi-Fi'}</span></div>
           <button className={'tog' + (e.mapasOff ? ' on' : '')} aria-pressed={e.mapasOff} aria-label="Mapas para usar sem sinal" onClick={() => muda(x => ({ mapasOff: !x.mapasOff }))}><i /></button></li>
+        <li><div><b>Simular campo sem sinal</b><span>{e.semSinal ? 'Sem sinal: inspeções ficam na fila e sobem quando o sinal voltar' : 'Teste o uso offline no campo (RNF)'}</span></div>
+          <button className={'tog' + (e.semSinal ? ' on' : '')} aria-pressed={e.semSinal} aria-label="Simular campo sem sinal" onClick={() => muda(x => ({ semSinal: !x.semSinal }))}><i /></button></li>
         <li><div><b>Talhões</b><span>Desenhar, importar do CAR e editar safras</span></div><a className="bt bt-c" href="#/talhoes">Abrir</a></li>
       </ul>
       <h2 className="sec">Seus dados (LGPD)</h2>
@@ -54,6 +57,7 @@ export function Perfil() {
         <li><div><b>Baixar meus dados</b><span>Fazenda, talhões, inspeções e histórico em JSON</span></div><button className="bt bt-c" onClick={exportar}><Icone n="baixar" c="p" />Baixar</button></li>
         <li><div><b>Apagar tudo deste aparelho</b><span>Volta a fazenda de exemplo ao estado inicial</span></div><button className="bt bt-t" onClick={apagar}><Icone n="lixo" c="p" />Apagar dados</button></li>
       </ul>
+      <button className="bt bt-c largo sair" onClick={sair}><Icone n="voltar" c="p" />Sair</button>
       <p className="nota">Nesta versão os dados ficam só neste navegador. Na versão com servidor, ficam em servidor no Brasil com acesso só para quem você autorizar.</p>
     </div>
   )

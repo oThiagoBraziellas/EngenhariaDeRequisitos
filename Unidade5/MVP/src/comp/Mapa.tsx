@@ -30,6 +30,7 @@ interface Props {
   soloUrl?: string
 }
 
+// ds-allow-hardcode: MapLibre paint properties cannot read CSS variables; these colors mirror the tokens in index.css
 const BASE = import.meta.env.BASE_URL
 const url = (d: string, c: 'ndvi' | 'rgb') => BASE + IMAGENS[d][c]
 const vazio = { type: 'FeatureCollection' as const, features: [] }

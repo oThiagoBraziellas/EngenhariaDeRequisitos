@@ -88,22 +88,34 @@ GPS e câmera no celular só funcionam em HTTPS. Para testar esses dois recursos
 
 ## 2. Como usar em 5 minutos
 
-O app abre direto na Fazenda Boa Vista, sem login.
+O app abre na tela de entrada. Para entrar, use uma das contas de demonstração (senha `agroai2025`):
+
+| Conta | Perfil |
+|---|---|
+| `produtor@agroai.app` | Produtor |
+| `agronomo@agroai.app` | Agrônomo |
+| `admin@agroai.app` | Administrador (pede também um código de 6 números; qualquer um serve) |
+
+Ou abra **Contas de demonstração** e toque em **entre direto na fazenda de exemplo**. Para voltar à tela de entrada: **Perfil → Sair**.
+
+![Tela de entrada](docs/telas/login-d.png)
+
 
 1. **Hoje:** veja as seis placas dos talhões. As vermelhas e amarelas têm alerta, com o NDVI da mancha contra o entorno.
 2. **Mapa:** toque no ▶ da faixa "Safra 2025/26" para ver a lavoura mudar nas 6 imagens reais. Troque a camada para **Uso do solo** ou **Relevo**. Toque num talhão para abrir a placa dele.
 3. **Alertas:** abra "Mancha de vigor baixo" no Talhão 3 e veja a evidência: o recorte da imagem, o NDVI da mancha e a hipótese da IA. Inclua ou tire o ponto da rota.
 4. **Rota do dia:** toque em **Iniciar rota**. Fora da fazenda de exemplo o trajeto é simulado. Em **Cheguei ao ponto**, escolha "Usar foto de exemplo", marque o achado e salve.
-5. **Sem sinal:** no topo, toque em **Com sinal** para simular a falta de internet. As inspeções ficam guardadas e sobem sozinhas quando o sinal volta.
+5. **Sem sinal:** em **Perfil → Simular campo sem sinal**, ligue a falta de internet. As inspeções ficam guardadas e sobem sozinhas quando o sinal volta.
 6. **Imagens e IA:** processe a passagem de 20/12 (descartada por nuvem) e a de 16/01 para ver as 7 etapas do processamento.
 7. **Modelos de IA** (perfil Admin): depois de registrar inspeções, recalibre o modelo e publique a versão nova.
 
-Para trocar de perfil, use **Ver como** no fim do menu, ou abra o endereço com `?perfil=admin` ou `?perfil=agronomo`.
+Depois de entrar, dá para trocar de perfil em **Ver como**, no fim do menu.
 
 ## 3. Telas
 
 | Tela | O que tem |
 |---|---|
+| **Entrada** | E-mail ou celular e senha, mostrar senha, aviso de Caps Lock, manter conectado, esqueci a senha, entrar com código por SMS, segundo passo para administrador, bloqueio de 30 s após 5 erros, criar conta com aceite dos termos (LGPD) e cadastro da fazenda |
 | **Hoje** | Placas dos 6 talhões (número, cultura, NDVI, estado), alerta de clima, mini-mapa com a rota, clima e rota do dia |
 | **Mapa** | Fundo de satélite com as cenas Sentinel-2 encaixadas por coordenada, contornos dos talhões, manchas detectadas, linha do tempo da safra com reprodução, camadas de NDVI, cor real, uso do solo e relevo |
 | **Talhão** | Placa, área, perímetro, NDVI mínimo e % abaixo de 0,6, curva de vigor da safra, mapa do talhão e as 6 cenas na mesma escala |
@@ -120,7 +132,7 @@ Para trocar de perfil, use **Ver como** no fim do menu, ou abra o endereço com 
 | **Equipe e convites** | Quem tem acesso, convite por e-mail ou celular, quem recebe o resumo do dia |
 | **Modelos de IA** | Precisão, recalibração com o retorno do campo, comparação e publicação de versões |
 | **Usuários e acesso** | Contas, fazendas e histórico de acesso com as tentativas negadas |
-| **Perfil** | Horário da rota, notificação no aparelho, WhatsApp, mapas sem sinal, baixar e apagar dados |
+| **Perfil** | Horário da rota, notificação no aparelho, WhatsApp, mapas sem sinal, simular campo sem sinal, baixar e apagar dados, sair |
 
 | Mapa e safra | Alerta com evidência |
 |---|---|
@@ -134,9 +146,9 @@ Para trocar de perfil, use **Ver como** no fim do menu, ou abra o endereço com 
 
 No celular as abas ficam embaixo e cada tela ocupa a largura toda:
 
-| Hoje | Rota | Alerta | Navegação |
-|---|---|---|---|
-| ![Hoje no celular](docs/telas/hoje-m.png) | ![Rota no celular](docs/telas/rota-m.png) | ![Alerta no celular](docs/telas/al-m.png) | ![Navegação no celular](docs/telas/nav-m.png) |
+| Entrada | Hoje | Rota | Alerta | Navegação |
+|---|---|---|---|---|
+| ![Entrada no celular](docs/telas/login-m.png) | ![Hoje no celular](docs/telas/hoje-m.png) | ![Rota no celular](docs/telas/rota-m.png) | ![Alerta no celular](docs/telas/al-m.png) | ![Navegação no celular](docs/telas/nav-m.png) |
 
 ## 4. Requisitos atendidos
 
@@ -146,7 +158,7 @@ Os requisitos são os da [seção 5 do pitch](../README.md#5-requisitos-do-produ
 
 | ID | Requisito | MoSCoW | Situação | Onde está |
 |---|---|:-:|:-:|---|
-| RF01 | Cadastro e login com perfil | Must | Parcial | Perfis produtor, agrônomo e administrador; sem tela de login nesta versão |
+| RF01 | Cadastro e login com perfil | Must | Parcial | Tela de entrada com senha, código por SMS, segundo passo do admin, recuperação de senha e criar conta; sem servidor, a conferência é feita no navegador |
 | RF02 | Cadastrar a fazenda | Must | Feito | Fazenda de exemplo; dados em Perfil e Usuários |
 | RF03 | Desenhar os talhões no mapa | Must | Feito | Talhões → Desenhar |
 | RF04 | Definir cultura e safra | Must | Feito | Talhões → Editar safra |
@@ -198,7 +210,7 @@ Os requisitos são os da [seção 5 do pitch](../README.md#5-requisitos-do-produ
 **Fluxos alternativos:**
 - **A1 · Nenhum ponto crítico:** tire todos os pontos da rota; o app avisa quando chega a próxima imagem.
 - **A2 · Imagem com nuvem:** a passagem de 20/12 é descartada e a rota continua com a de 25/12.
-- **A3 · Sem internet:** com "Sem sinal" ligado, a inspeção fica guardada no aparelho.
+- **A3 · Sem internet:** com "Simular campo sem sinal" ligado (em Perfil), a inspeção fica guardada no aparelho.
 - **A4 · Não encontrei nada:** o ponto vira falso positivo e entra na recalibração.
 
 ### UC02 · Detectar e classificar anomalias com IA
