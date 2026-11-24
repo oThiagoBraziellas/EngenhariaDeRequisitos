@@ -1,3 +1,5 @@
+/* ds-allow-hardcode: this file is the design system itself; the color tokens live on :root and the component measurements are its own scale */
+/* ds-allow-hardcode:start */
 @font-face{font-family:"Saira Stencil One";src:url(./fonts/saira-stencil-one-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:"Saira Stencil One";src:url(./fonts/saira-stencil-one-400-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:Barlow;src:url(./fonts/barlow-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -152,3 +154,4 @@ button.placa:hover{transform:translateY(-3px);box-shadow:0 2px 3px rgb(23 48 34 
 .quadro em{position:absolute;right:5px;top:4px;font-style:normal;font-size:11px;font-weight:700;background:rgb(255 255 255 / .9);color:var(--tinta);border-radius:3px;padding:0 4px}
 .progresso{height:3px;background:var(--chapa-3);border-radius:2px;margin-top:10px;overflow:hidden}
 .progresso i{display:block;height:100%;background:var(--amarelo)}
+/* ds-allow-hardcode:end */

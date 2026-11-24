@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { Icone } from './comp/Icone'
 import { Toast, useToast } from './comp/Pecas'
-import { NOME_PERFIL, alertasAtivos, muda, pode, registra, useEstado, useOnline, type Perfil } from './lib/estado'
+import { NOME_PERFIL, alertasAtivos, muda, pode, registra, useEstado, type Perfil } from './lib/estado'
 import { useRota, vai } from './lib/rotas'
 import { Hoje } from './telas/Hoje'
 import { MapaTela } from './telas/MapaTela'
@@ -18,6 +18,7 @@ import { Equipe } from './telas/Equipe'
 import { Modelos } from './telas/Modelos'
 import { Usuarios } from './telas/Usuarios'
 import { Mais } from './telas/Mais'
+import { Entrar } from './telas/Entrar'
 import { GRUPOS } from './lib/menu'
 
 const SECAO: Record<string, string> = { talhao: 'talhoes', desenhar: 'talhoes', navegar: 'rota', inspecao: 'rota', fila: 'rota' }
@@ -27,13 +28,12 @@ const RESTRITO: Record<string, 'equipe' | 'modelos' | 'gestao'> = { equipe: 'equ
 
 export default function App() {
   const e = useEstado()
-  const online = useOnline()
   const msg = useToast()
   const [tela = 'hoje', arg] = useRota()
+  if (!e.entrou) return <><Entrar /><Toast msg={msg} /></>
 
   const sec = SECAO[tela] || tela
   const nAl = alertasAtivos(e).filter(a => a.pri !== 'baixa').length
-  const pend = e.insp.filter(i => i.st === 'pendente').length
   const negado = RESTRITO[tela] && !pode(e, RESTRITO[tela])
   const conteudo = negado ? <Negado tela={tela} /> : (() => {
     switch (tela) {
@@ -64,9 +64,6 @@ export default function App() {
       <header className="barra">
         <a className="marca" href="#/hoje"><img src={import.meta.env.BASE_URL + 'logo_branca.png'} alt="AGROAI, início" /></a>
         <div className="barra-dir">
-          <button className={'sinal' + (online ? '' : ' off')} onClick={() => muda(x => ({ semSinal: !x.semSinal }))} aria-pressed={!online} title="Simular a falta de sinal no campo">
-            <i />{online ? 'Com sinal' : 'Sem sinal'}{pend > 0 && <span className="conta">{pend}</span>}
-          </button>
           <a className="avatar" href="#/perfil" aria-label="Perfil e configurações">{e.usuario.nome.slice(0, 1)}</a>
         </div>
       </header>

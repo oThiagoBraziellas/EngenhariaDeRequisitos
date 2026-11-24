@@ -18,6 +18,7 @@ export interface VersaoModelo { v: string; cultura: string; precisao: number; re
 export interface Msg { de: 'eu' | 'ia'; txt: string }
 
 export interface Estado {
+  entrou: boolean
   usuario: { nome: string; contato: string; perfil: Perfil }
   fazenda: { nome: string; mun: string; cult: string[] }
   proprios: Proprio[]
@@ -46,6 +47,7 @@ const SAFRAS_INI: Record<string, SafraTalhao> = {
   T6: { cultura: 'Soja', plantio: '2025-10-15', colheita: '2026-02-18' },
 }
 export const INICIAL: Estado = {
+  entrou: false,
   usuario: { nome: 'Thiago', contato: '(64) 99999-0000', perfil: 'produtor' },
   fazenda: { nome: 'Fazenda Boa Vista', mun: 'Rio Verde (GO)', cult: ['Soja', 'Milho'] },
   proprios: [], safras: SAFRAS_INI, rota: ['a1', 'a2', 'a3'], ignorados: [], insp: [], semSinal: false,
